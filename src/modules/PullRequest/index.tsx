@@ -15,14 +15,16 @@ import { useAppSelector } from '../shared/store'
 
 export default function PullRequest() {
   const { user } = useAppSelector((state) => state.auth)
+  console.log({ user })
   const { id } = useParams()
   const { data: pullRequests, isLoading } = useQuery({
-    queryFn: () => fetchGitHubPullRequests({ user: user?.user_metadata?.user_name, repo: id! }), // for getting just the name of the user no more information
+    queryFn: () => fetchGitHubPullRequests({ user: user?.user_metadata?.user_name, repo: id! }),
     queryKey: ['pullRequests', {}],
     staleTime: Infinity,
     cacheTime: 1,
   })
 
+  console.log({ pullRequests })
   return (
     <MainLayout>
       <MainContainer
