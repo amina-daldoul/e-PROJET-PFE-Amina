@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build"
+  command = "sudo npm run build && npx tailwindcss -i ./src/home/index.scss -o ./dist/index.scss --minify"
   publish = "dist"
 
 [[redirects]]
