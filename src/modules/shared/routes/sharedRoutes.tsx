@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Fragment, lazy } from 'react'
+import { Fragment } from 'react'
 import { RouteProps } from 'react-router-dom'
 
 type RouteConfig = {

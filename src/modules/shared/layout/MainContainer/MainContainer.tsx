@@ -1,4 +1,4 @@
-import { CSSProperties, ReactElement, ReactNode } from 'react'
+import { CSSProperties, ReactElement } from 'react'
 import NavList, { INavList } from '../../components/NavList'
 import ScrollContainer from '../../components/ScrollContainer'
 

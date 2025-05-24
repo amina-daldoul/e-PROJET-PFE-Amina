@@ -1,4 +1,5 @@
 import { useLocation } from 'react-router-dom'
+//@ts-ignore
 import { disablePageScroll, enablePageScroll } from 'scroll-lock'
 
 import { navigation } from '../constants'

@@ -34,7 +34,7 @@ axiosInstance.interceptors.response.use(
       previousRequest.sent = true
       try {
         const { refresh_token } = getTokens()
-        const response = await axios.get(baseURL + '/api/auth/refresh', {
+        await axios.get(baseURL + '/api/auth/refresh', {
           headers: {
             Authorization: `Bearer ${refresh_token}`,
           },

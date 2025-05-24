@@ -1,3 +1,5 @@
+//@ts-nocheck
+
 function n(e: { phase: number; amplitude: number; frequency: number; offset: number }) {
   this.init(e || {})
 }

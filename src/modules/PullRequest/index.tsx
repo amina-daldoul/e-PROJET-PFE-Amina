@@ -1,7 +1,7 @@
 import { fetchGitHubPullRequests } from '@src/modules/shared/store/Queries/PullRequest'
 import { Collapse } from 'antd'
 import { useQuery } from 'react-query'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 import Commits from './Commits/commits'
 import './index.scss'

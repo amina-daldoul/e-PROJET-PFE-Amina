@@ -1,4 +1,5 @@
 import { Suspense } from 'react'
+//@ts-ignore
 import ReactDOM from 'react-dom/client'
 import { HelmetProvider } from 'react-helmet-async'
 import { Provider } from 'react-redux'

@@ -1,10 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { PATH } from '@src/modules/auth/routes/paths'
 import AuthGuard from '@src/modules/shared/guards/AuthGuard'
 import UniverseWrapper from '@src/modules/shared/layout/UniverseWrapper'
 import { Fragment, lazy } from 'react'
 import { RouteProps } from 'react-router-dom'
-import GuestGuard from '../shared/guards/GuestGuard'
 
 type RouteConfig = {
   exact: boolean | null

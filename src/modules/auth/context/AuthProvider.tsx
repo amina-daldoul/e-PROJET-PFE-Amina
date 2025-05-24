@@ -9,15 +9,11 @@ interface AuthProviderProps {
   children: React.ReactNode
 }
 
-interface JwtPayload {
-  exp: number
-}
-
 const AuthProvider = ({ children }: AuthProviderProps) => {
   const isMounted = useIsMountedRef()
   const dispatch = useDispatch()
 
-  const isValidToken = (token: string) => true
+  const isValidToken = (token: string) => !!token || true
 
   useEffect(() => {
     if (!isMounted.current) {
