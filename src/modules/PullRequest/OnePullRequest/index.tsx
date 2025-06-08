@@ -25,8 +25,9 @@ export default function OnePullRequest({ pull }: OnePullRequestProps) {
           Merge branch {pull?.head.ref} into {pull?.base.ref} <MergeIcon />{' '}
         </p>
         <p className="OnePullRequest-container__left-part__date">
-          {' '}
-          Created At: {dayjs(pull.created_at).format('YYYY-MM-DD')}{' '}
+          Created At:
+          {dayjs(pull?.created_at!).format('YYYY-MM-DD')}
+          {pull?.created_at!}
         </p>
       </div>
       <div className="OnePullRequest-container__right-part">
@@ -51,7 +52,9 @@ export default function OnePullRequest({ pull }: OnePullRequestProps) {
         </div>
         <div className="OnePullRequest-container__right-part__date">
           <p className="OnePullRequest-container__right-part__date__content">
-            Updated At: {dayjs(pull.updated_at).format('YYYY-MM-DD/HH:mm')}
+            Updated At:
+            {dayjs(pull.updated_at).format('YYYY-MM-DD/HH:mm')}
+            {pull.updated_at!}
           </p>
         </div>
       </div>

@@ -16,8 +16,8 @@ export default function Repositories() {
   const { data: repositories, isLoading } = useQuery({
     queryFn: () => fetchGitHubRepositories(),
     queryKey: ['repositories', {}],
-    staleTime: Infinity, // pour contrôler la durée pendant laquelle les données mises en cache sont considérées comme "stalles" (périmées).
-    cacheTime: 1, // pour contrôler la durée pendant laquelle les données mises en cache sont conservées en mémoire.
+    staleTime: Infinity,
+    cacheTime: 1,
   })
   const handleRepoClick = (repo: string) => {
     navigate(PATH.PULLREQUEST.replace(':id', repo))
@@ -25,15 +25,15 @@ export default function Repositories() {
 
   return (
     <MainLayout>
-      <MainContainer // same as div : feha le continue as children feha css mte3ha 7a4err
+      <MainContainer
         linkProps={{
-          title: 'Repositories', // titre of the page
+          title: 'Repositories',
           links: [{ href: PATH.REPO, name: 'repositories' }],
         }}
         style={{ paddingBottom: 0 }}
       >
         {isLoading ? (
-          <LoadingScreen blur size="full" /> // if the fetching is not finished yet
+          <LoadingScreen blur size="full" />
         ) : (
           <div className="repositories-container">
             {!repositories || repositories?.length == 0 ? (

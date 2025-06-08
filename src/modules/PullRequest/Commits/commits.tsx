@@ -1,11 +1,11 @@
+import { PATH } from '@src/modules/auth/routes/paths'
+import LoadingScreen from '@src/modules/shared/components/Loading'
+import { useAppSelector } from '@src/modules/shared/store'
 import { fetchGitHubPullRequestCommits } from '@src/modules/shared/store/Queries/Commits'
 import { useQuery } from 'react-query'
 import { useNavigate, useParams } from 'react-router-dom'
-import { useAppSelector } from '@src/modules/shared/store'
-import LoadingScreen from '@src/modules/shared/components/Loading'
-import { PATH } from '@src/modules/auth/routes/paths'
-import * as dayjs from 'dayjs'
 import '../Commits/index.scss'
+import * as dayjs from 'dayjs'
 
 export default function Commits({ CommitId }: { CommitId: number }) {
   const { id } = useParams()
@@ -64,6 +64,7 @@ export default function Commits({ CommitId }: { CommitId: number }) {
             <div className="one-commit-container__content__right">
               <p className="one-commit-container__content__right__message">
                 {dayjs(commit?.commit?.committer?.date).format('YYYY-MM-DD/HH:mm')}
+                {commit?.commit?.committer?.date!}
               </p>
             </div>
           </div>
